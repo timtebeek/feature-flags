@@ -6,5 +6,5 @@ recipeList:
       matchOverrides: true
 
 #  - org.openrewrite.featureflags.openfeature.RemoveGetBooleanValue:
-#      featureKey: "use-new-search"
+#      featureKey: "use-new-search-service"
 #      replacementValue: "true"
