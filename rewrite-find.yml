@@ -1,0 +1,10 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: name
+recipeList:
+  - org.openrewrite.java.search.FindMethods:
+      methodPattern: io.moderne.books.SearchService search(String)
+      matchOverrides: true
+
+#  - org.openrewrite.featureflags.openfeature.RemoveGetBooleanValue:
+#      featureKey: "use-new-search"
+#      replacementValue: "true"

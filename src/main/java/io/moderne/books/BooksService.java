@@ -12,5 +12,4 @@ class BooksService {
                 new Book("The Great Gatsby", "F. Scott Fitzgerald")
         );
     }
-
 }
