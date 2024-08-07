@@ -34,4 +34,5 @@ Finally, you can remove feature flags that are no longer needed.
 Using these recipes you can easily find insertion points for feature flags, find feature flags in use, and remove feature flags.
 While the example uses OpenFeature, similar recipes are availabled for other SDKs as well, as well as custom feature flag implementations.
 
-Learn more at https://github.com/openrewrite/rewrite-feature-flags
+Learn more at https://github.com/openrewrite/rewrite-feature-flags &  
+https://www.moderne.ai/blog/streamline-feature-flag-management-automate-removal-with-openrewrite-moderne
