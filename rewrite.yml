@@ -1,0 +1,37 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: io.moderne.books.FindInsertionPoint
+description: |
+  This recipe finds the insertion point for a new method call to the SearchService.
+  Especially useful when there might be multiple insertion points across various repositories.
+recipeList:
+  - org.openrewrite.java.search.FindMethods:
+      methodPattern: io.moderne.books.SearchService search(String)
+      matchOverrides: true
+
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: io.moderne.books.FindAnyFeatureFlag
+description: |
+  This recipe finds any feature flag in the codebase.
+  Useful when you want to see all the feature flags in the codebase.
+recipeList:
+  - org.openrewrite.featureflags.openfeature.search.FindFeatureFlag
+
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: io.moderne.books.FindSpecificFeatureFlag
+description: |
+  This recipe finds a specific feature flag in the codebase.
+recipeList:
+  - org.openrewrite.featureflags.openfeature.search.FindFeatureFlag:
+      featureKey: "use-new-search-service"
+
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: io.moderne.books.RemoveFeatureFlag
+description: |
+  This recipe removes a specific feature flag in the codebase.
+recipeList:
+  - org.openrewrite.featureflags.openfeature.RemoveGetBooleanValue:
+      featureKey: use-new-search-service
+      replacementValue: true
