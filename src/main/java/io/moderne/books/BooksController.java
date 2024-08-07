@@ -9,7 +9,9 @@ class BooksController {
         return oldSearchService.search(query);
     }
 
-//    public List<Book> search(dev.openfeature.sdk.Client client, String query) {
+    private dev.openfeature.sdk.Client client;
+
+//    public List<Book> search(String query) {
 //        if (client.getBooleanValue("use-new-search-service", true)) {
 //            SearchService oldSearchService = new NewSearchService();
 //            return oldSearchService.search(query);
