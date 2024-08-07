@@ -5,19 +5,19 @@ import java.util.List;
 class BooksController {
 
     public List<Book> search(String query) {
-        SearchService oldSearchService = new OldSearchService();
-        return oldSearchService.search(query);
+        return new OldSearchService().search(query);
     }
 
-    private dev.openfeature.sdk.Client client;
-
+//    // Alternative implementation that toggles between two implementations
+//    private dev.openfeature.sdk.Client client;
+//
 //    public List<Book> search(String query) {
 //        if (client.getBooleanValue("use-new-search-service", true)) {
-//            SearchService oldSearchService = new NewSearchService();
-//            return oldSearchService.search(query);
+//            // Search across titles and authors
+//            return new NewSearchService().search(query);
 //        } else {
-//            SearchService oldSearchService = new OldSearchService();
-//            return oldSearchService.search(query);
+//            // Search across titles only
+//            return new OldSearchService().search(query);
 //        }
 //    }
 }

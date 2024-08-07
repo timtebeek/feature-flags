@@ -33,5 +33,5 @@ description: |
   This recipe removes a specific feature flag in the codebase.
 recipeList:
   - org.openrewrite.featureflags.openfeature.RemoveGetBooleanValue:
-      featureKey: use-new-search-service
+      featureKey: "use-new-search-service"
       replacementValue: true
