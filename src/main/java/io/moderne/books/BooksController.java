@@ -4,13 +4,18 @@ import java.util.List;
 
 class BooksController {
 
-    private final SearchService searchService;
-
-    public BooksController(SearchService searchService) {
-        this.searchService = searchService;
-    }
-
     public List<Book> search(String query) {
-        return searchService.search(query);
+        SearchService oldSearchService = new OldSearchService();
+        return oldSearchService.search(query);
     }
+
+//    public List<Book> search(dev.openfeature.sdk.Client client, String query) {
+//        if (client.getBooleanValue("use-new-search-service", true)) {
+//            SearchService oldSearchService = new NewSearchService();
+//            return oldSearchService.search(query);
+//        } else {
+//            SearchService oldSearchService = new OldSearchService();
+//            return oldSearchService.search(query);
+//        }
+//    }
 }
